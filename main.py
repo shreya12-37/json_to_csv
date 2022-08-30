@@ -4,7 +4,7 @@ import csv
 import ast
 
 def organizing():
-    df = pd.read_csv('/Users/apple/Desktop/ketto2/query_result_2022-08-24T08_59_31.12Z.csv')
+    df = pd.read_csv('query_result_2022-08-24T08_59_31.12Z.csv')
     stdf = df['info_1'].apply(json.loads)
     stlst = list(stdf)
     stjson = json.dumps(stlst)
@@ -16,7 +16,7 @@ def organizing():
 organizing()
 
 def dict_to_csv():
-    filename = open('/Users/apple/Desktop/ketto2/test.csv', 'r')
+    filename = open('test.csv', 'r')
     file = csv.DictReader(filename)
 
     entityids = []
